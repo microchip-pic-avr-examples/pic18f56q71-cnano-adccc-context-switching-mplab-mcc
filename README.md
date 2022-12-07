@@ -1,8 +1,8 @@
 <a href="https://www.microchip.com" rel="nofollow"><img src="images/microchip.png" alt="MCHP" width="300"/></a>
 
-# Analog-to-Digital Converter with Computation and Context (ADCCC) — Context Switching Using PIC18F56Q71 Microcontroller with MCC Melody
+# Analog-to-Digital Converter with Computation (ADCC) and Context Switching — Context Switching Using PIC18F56Q71 Microcontroller with MCC Melody
 
-This code example demonstrates how to perform two Analog-to-Digital Converter with Computation and Context (ADCCC) conversions from two input channels that have different peripheral configurations by using the Context Switching feature. The ADCCC supports up to 4 configuration contexts and offers the option of switching between these contexts at run-time. By using this feature, a single ADCCC peripheral is used to capture data from multiple analog input channels, each one of them having its own configuration. The converion results are then processed and displayed on a terminal software by using serial communication via UART peripheral.
+This code example demonstrates how to perform two Analog-to-Digital Converter with Computation (ADCC) and Context Switching conversions from two input channels that have different peripheral configurations by using the Context Switching feature. The ADCC with Context Switching supports up to four configuration contexts and offers the option of switching between these contexts at run-time. By using this feature, a single ADCC with Context Switching peripheral is used to capture data from multiple analog input channels, each one of them having its own configuration. The conversion results are processed and displayed on a terminal software by using serial communication via an UART peripheral.
 
 ## Related Documentation
 
@@ -20,7 +20,7 @@ More details and code examples on the PIC18F56Q71 can be found at the following 
 
 ## Hardware Used
 
-- The PIC18F56Q71 Curiosity Nano Development Board is used as a test platform:
+- The PIC18F56Q71 Curiosity Nano Development board is used as a test platform:
   <br><img src="images/pic18f56q71-curiosity-nano-board.png">
 
 - Curiosity Nano Adapter:
@@ -40,25 +40,25 @@ To program the Curiosity Nano board with this MPLAB® X project, follow the step
 The following configurations must be made for this project:
 
 - The system clock is configured at 64 MHz - ADCRC Oscillator enabled
-- ADCCC:
-  - Input Configuration: Single-Ended Mode
+- ADCC with Context Switching:
+  - Input Configuration: Single-Ended mode
   - Result Format: Right justified
-  - VDD: 3.3 V
+  - V<sub>DD</sub>: 3.3 V
   - Clock Selection: ADCRC
   - Enable Context 1:
     - Positive Channel Selection: ANA1
-    - Positive Voltage Reference: VDD
-    - Operating Mode Selection: Average Mode
+    - Positive Voltage Reference: V<sub>DD</sub>
+    - Operating Mode Selection: Average mode
     - Error Calculation Mode: First derivative of single measurement
   - Enable Context 2:
     - Positive Channel Selection: ANA2
-    - Positive Voltage Reference: VDD
-    - Operating Mode Selection: Basic Mode
+    - Positive Voltage Reference: V<sub>DD</sub>
+    - Operating Mode Selection: Basic mode
     - Error Calculation Mode: First derivative of single measurement
 - UART2:
   - 115200 baud rate
   - 8 data bits
-  - no parity bit
+  - No parity bit
   - 1 Stop bit
 - UART2PLIB:
   - Redirect STDIO to UART: enabled
@@ -72,7 +72,7 @@ The following configurations must be made for this project:
 | RB4 | Digital output |
 | RB5 | Digital input  |
 
-[Back to Top](#analog-to-digital-converter-with-computation-and-context-adccc--context-switching-using-pic18f56q71-microcontroller-with-mcc-melody)<br>
+[Back to Top](#analog-to-digital-converter-with-computation-adcc-and-context-switching--context-switching-using-pic18f56q71-microcontroller-with-mcc-melody)<br>
 
 <br>
 
@@ -84,14 +84,14 @@ In this example, the ADC reads data from the two potentiometers using context sw
 
 <br><img src="images/Conext_Switching_Demo.jpg" width="300">
 
-[Back to Top](#analog-to-digital-converter-with-computation-and-context-adccc--context-switching-using-pic18f56q71-microcontroller-with-mcc-melody)<br>
+[Back to Top](#analog-to-digital-converter-with-computation-adcc-and-context-switching--context-switching-using-pic18f56q71-microcontroller-with-mcc-melody)<br>
 
 ## Summary
 
-This example shows how to configure the ADCCC using the Microchip Code Configurator. Also, it demonstrates the use of context switching for acquiring data from multiple analog inputs.
+This example shows how to configure the ADCC with Context Switching using the MPLAB® Code Configurator. Also, it demonstrates the use of context switching for acquiring data from multiple analog inputs.
 <br>
 
-[Back to Top](#analog-to-digital-converter-with-computation-and-context-adccc--context-switching-using-pic18f56q71-microcontroller-with-mcc-melody)<br>
+[Back to Top](#analog-to-digital-converter-with-computation-adcc-and-context-switching--context-switching-using-pic18f56q71-microcontroller-with-mcc-melody)<br>
 <br>
 
 ## How to Program the Curiosity Nano Board
@@ -125,4 +125,4 @@ This chapter demonstrates how to use the MPLAB® X IDE to program an PIC® devic
 - [Back to Setup](#setup)
 - [Back to Demo](#demo)
 - [Back to Summary](#summary)
-- [Back to Top](#analog-to-digital-converter-with-computation-and-context-adccc--context-switching-using-pic18f56q71-microcontroller-with-mcc-melody)<br>
+- [Back to Top](#analog-to-digital-converter-with-computation-adcc-and-context-switching--context-switching-using-pic18f56q71-microcontroller-with-mcc-melody)<br>
