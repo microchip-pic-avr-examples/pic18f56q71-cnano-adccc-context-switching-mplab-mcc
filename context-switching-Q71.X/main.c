@@ -11,7 +11,7 @@
 */
 
 /*
-© [2022] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -83,7 +83,7 @@ int main(void)
         result = ADC_GetConversionResult();      
         
         //conversion from ADC reading to voltage value
-        voltage_level = (result * 3.3)/4095;             
+        voltage_level = (float)(result * 3.3)/4095;             
       
         printf("%.2f", voltage_level);
         printf("%s\r\n", "V");
