@@ -63,8 +63,7 @@ int main(void)
     current_context = context_1;
 
     while(1)
-    {   
-        
+    {         
         if(current_context == context_2)
         {
             current_context = context_1;
@@ -87,7 +86,6 @@ int main(void)
       
         printf("%.2f", voltage_level);
         printf("%s\r\n", "V");
-        __delay_ms(500);        
-        
+        __delay_ms(500);             
     }    
 }

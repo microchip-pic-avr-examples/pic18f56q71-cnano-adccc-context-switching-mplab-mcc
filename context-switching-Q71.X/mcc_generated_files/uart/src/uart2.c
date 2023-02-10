@@ -7,7 +7,7 @@
  * 
  * @brief This is the generated driver implementation file for the UART2 driver using CCL
  *
- * @version UART2 Driver Version 3.0.3
+ * @version UART2 Driver Version 3.0.1
 */
 
 /*
@@ -54,8 +54,8 @@ const uart_drv_interface_t UART2 = {
     .IsTxDone = &UART2_IsTxDone,
     .TransmitEnable = &UART2_TransmitEnable,
     .TransmitDisable = &UART2_TransmitDisable,
-    .AutoBaudSet = &UART2_AutoBaudSet,
-    .AutoBaudQuery = &UART2_AutoBaudQuery,
+    .AutoBaudSet = NULL,
+    .AutoBaudQuery = NULL,
     .BRGCountSet = NULL,
     .BRGCountGet = NULL,
     .BaudRateSet = NULL,
@@ -113,8 +113,8 @@ void UART2_Initialize(void)
     U2CON1 = 0x80; 
     //FLO off; TXPOL not inverted; STP Transmit 1Stop bit, receiver verifies first Stop bit; RXPOL not inverted; RUNOVF RX input shifter stops all activity; 
     U2CON2 = 0x0; 
-    //BRGL 138; 
-    U2BRGL = 0x8A; 
+    //BRGL 137; 
+    U2BRGL = 0x89; 
     //BRGH 0; 
     U2BRGH = 0x0; 
     //TXBE empty; STPMD in middle of first Stop bit; TXWRE No error; 
@@ -191,39 +191,6 @@ inline void UART2_SendBreakControlDisable(void)
     U2CON1bits.SENDB = 0;
 }
 
-inline void UART2_AutoBaudSet(bool enable)
-{
-    if(enable)
-    {
-        U2CON0bits.ABDEN = 1; 
-    }
-    else
-    {
-      U2CON0bits.ABDEN = 0;  
-    }
-}
-
-
-inline bool UART2_AutoBaudQuery(void)
-{
-    return (bool)U2UIRbits.ABDIF; 
-}
-
-inline void UART2_AutoBaudDetectCompleteReset(void)
-{
-    U2UIRbits.ABDIF = 0; 
-}
-
-inline bool UART2_IsAutoBaudDetectOverflow(void)
-{
-    return (bool)U2ERRIRbits.ABDOVF; 
-}
-
-inline void UART2_AutoBaudDetectOverflowReset(void)
-{
-    U2ERRIRbits.ABDOVF = 0; 
-}
-
 bool UART2_IsRxReady(void)
 {
     return (bool)(!U2FIFObits.RXBE);
@@ -274,6 +241,18 @@ void UART2_Write(uint8_t txData)
     U2TXB = txData; 
 }
 
+
+int getch(void)
+{
+    while(!(UART2_IsRxReady()));
+    return UART2_Read();
+}
+
+void putch(char txData)
+{
+    while(!(UART2_IsTxReady()));
+    return UART2_Write(txData);   
+}
 
 
 
