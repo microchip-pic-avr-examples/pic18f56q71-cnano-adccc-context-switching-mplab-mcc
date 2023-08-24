@@ -1,14 +1,15 @@
 /**
- * System Driver Source File
+ * CONFIGURATION BITS Generated Driver Header File
  * 
- * @file system.c
+ * @file config_bits.h
  * 
- * @ingroup systemdriver
+ * @defgroup config_bitsdriver CONFIGBITS Driver 
  * 
- * @brief This is the generated driver implementation file for the System Driver.
+ * @brief This file contains the API prototype for the Configuration Bits driver.
  *
  * @version Driver Version 1.0.0
 */
+
 /*
 © [2023] Microchip Technology Inc. and its subsidiaries.
 
@@ -30,21 +31,12 @@
     THIS SOFTWARE.
 */
 
- /**
-   Section: Included Files
- */
-#include "../system.h"
+#ifndef CONFIG_BITS_H
+#define	CONFIG_BITS_H
 
+#include "../system/clock.h"
+
+#endif	/* CONFIG_BITS_H */
 /**
-  Section: Driver APIs
+ End of File
 */
-
-void SYSTEM_Initialize(void)
-{
-    CLOCK_Initialize();
-    PIN_MANAGER_Initialize();
-    ADC_Initialize();
-    UART2_Initialize();
-    INTERRUPT_Initialize();
-}
-

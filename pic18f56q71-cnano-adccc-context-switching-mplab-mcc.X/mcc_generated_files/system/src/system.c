@@ -1,15 +1,14 @@
 /**
- * CLOCK Generated Driver Source File
+ * System Driver Source File
  * 
- * @file clock.c
+ * @file system.c
  * 
- * @ingroup clockdriver 
+ * @ingroup systemdriver
  * 
- * @brief This is the generated driver implementation file for the CLOCK.
+ * @brief This file contains the API implementation for the System driver.
  *
- * @version Driver Version 2.0.2
+ * @version Driver Version 1.0.2
 */
-
 /*
 © [2023] Microchip Technology Inc. and its subsidiaries.
 
@@ -31,25 +30,15 @@
     THIS SOFTWARE.
 */
 
-#include <xc.h>
-#include "../clock.h"
+#include "../system.h"
 
-void CLOCK_Initialize(void)
+
+void SYSTEM_Initialize(void)
 {
-    // Set the CLOCK CONTROL module to the options selected in the user interface.
-    // NDIV 1; NOSC HFINTOSC; 
-    OSCCON1 = 0x60;
-    // SOSCPWR Low power; CSWHOLD may proceed; 
-    OSCCON3 = 0x0;
-    // EXTOEN disabled; HFOEN disabled; MFOEN disabled; LFOEN disabled; SOSCEN disabled; ADOEN enabled; 
-    OSCEN = 0x4;
-    // HFFRQ 64_MHz; 
-    OSCFRQ = 0x8;
-    // TUN undefined; 
-    OSCTUNE = 0x0;
-    // ACTEN disabled; ACTUD enabled; 
-    ACTCON = 0x0;
+    CLOCK_Initialize();
+    PIN_MANAGER_Initialize();
+    ADC_Initialize();
+    UART2_Initialize();
+    INTERRUPT_Initialize();
 }
-/**
- End of File
-*/
+

@@ -220,6 +220,15 @@ void INTERRUPT_Initialize (void);
 
 /**
  * @ingroup interrupt
+ * @brief Implements the Interrupt Service Routine (ISR) whenever the signal on the INT0 pin transitions on the selected edge.
+ * @pre INTERRUPT_Initialize() is already called.
+ * @param None.
+ * @return None.
+ */
+void INT0_ISR(void);
+
+/**
+ * @ingroup interrupt
  * @brief Function to be called in the INT0 ISR containing the interrupt handler function for the INT0 pin interrupt event.
  * @pre INTERRUPT_Initialize() is already called.
  * @param None.
@@ -257,6 +266,15 @@ void INT0_DefaultInterruptHandler(void);
 
 /**
  * @ingroup interrupt
+ * @brief Implements the Interrupt Service Routine (ISR) whenever the signal on the INT1 pin transitions on the selected edge.
+ * @pre INTERRUPT_Initialize() is already called.
+ * @param None.
+ * @return None.
+ */
+void INT1_ISR(void);
+
+/**
+ * @ingroup interrupt
  * @brief Function to be called in the INT1 ISR containing the interrupt handler function for the INT1 pin interrupt event.
  * @pre INTERRUPT_Initialize() is already called.
  * @param None.
@@ -291,6 +309,15 @@ extern void (*INT1_InterruptHandler)(void);
  * @return None.
  */
 void INT1_DefaultInterruptHandler(void);
+
+/**
+ * @ingroup interrupt
+ * @brief Implements the Interrupt Service Routine (ISR) whenever the signal on the INT2 pin transitions on the selected edge.
+ * @pre INTERRUPT_Initialize() is already called.
+ * @param None.
+ * @return None.
+ */
+void INT2_ISR(void);
 
 /**
  * @ingroup interrupt

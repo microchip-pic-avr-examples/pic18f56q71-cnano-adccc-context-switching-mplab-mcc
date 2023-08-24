@@ -13,10 +13,9 @@ More details and code examples on the PIC18F56Q71 can be found at the following 
 
 ## Software Used
 
-- [MPLAB® X IDE](http://www.microchip.com/mplab/mplab-x-ide) v6.05 or newer
-- [MPLAB® X IPE](https://www.microchip.com/en-us/tools-resources/production/mplab-integrated-programming-environment) v6.05 or newer
-- [MPLAB® XC8](http://www.microchip.com/mplab/compilers) v2.40 or newer
-- [PIC18F-Q Series Device Pack](https://packs.download.microchip.com/) v1.15.360 or newer
+- [MPLAB® X IDE](http://www.microchip.com/mplab/mplab-x-ide) v6.15 or newer
+- [MPLAB® XC8](http://www.microchip.com/mplab/compilers) v2.41 or newer
+- [PIC18F-Q Series Device Pack](https://packs.download.microchip.com/) v1.21.411 or newer
 
 ## Hardware Used
 
@@ -122,7 +121,12 @@ This chapter demonstrates how to use the MPLAB® X IDE to program an PIC® devic
 
 <br>
 
-- [Back to Setup](#setup)
-- [Back to Demo](#demo)
-- [Back to Summary](#summary)
-- [Back to Top](#analog-to-digital-converter-with-computation-adcc-and-context-switching--context-switching-using-pic18f56q71-microcontroller-with-mcc-melody)<br>
+- [Analog-to-Digital Converter with Computation (ADCC) and Context Switching — Context Switching Using PIC18F56Q71 Microcontroller with MCC Melody](#analog-to-digital-converter-with-computation-adcc-and-context-switching--context-switching-using-pic18f56q71-microcontroller-with-mcc-melody)
+  - [Related Documentation](#related-documentation)
+  - [Software Used](#software-used)
+  - [Hardware Used](#hardware-used)
+  - [Operation](#operation)
+  - [Setup](#setup)
+  - [Demo](#demo)
+  - [Summary](#summary)
+  - [How to Program the Curiosity Nano Board](#how-to-program-the-curiosity-nano-board)

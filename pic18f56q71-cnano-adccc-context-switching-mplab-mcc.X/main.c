@@ -48,44 +48,42 @@ int main(void)
     //INTERRUPT_GlobalInterruptHighEnable(); 
 
     // Disable the Global High Interrupts 
-    //INTERRUPT_GlobalInterruptHighDisable(); 
-
+    //INTERRUPT_GlobalInterruptHighDisable();
+    
     // Enable the Global Low Interrupts 
     //INTERRUPT_GlobalInterruptLowEnable(); 
 
     // Disable the Global Low Interrupts 
-    //INTERRUPT_GlobalInterruptLowDisable(); 
+    //INTERRUPT_GlobalInterruptLowDisable();
 
-    float voltage_level;
+    float voltageLevel;
     adc_result_t result;
-    adc_context_t current_context;
+    adc_context_t currentContext;
     
-    current_context = context_1;
+    currentContext = context_1;
 
     while(1)
     {         
-        if(current_context == context_2)
+        if(currentContext == context_2)
         {
-            current_context = context_1;
-            printf("%s", "Potentiometer_1: ");
+            currentContext = context_1;
+            printf("Potentiometer_1: ");
         }
-        else if(current_context == context_1)
+        else if(currentContext == context_1)
         {
-            current_context = context_2;
-            printf("%s", "Potentiometer_2: ");
+            currentContext = context_2;
+            printf("Potentiometer_2: ");
         }
                 
-        ADC_SelectContext(current_context);                  
-     
+        ADC_SelectContext(currentContext);                  
         ADC_StartConversion();        
         while(!ADC_IsConversionDone());        
         result = ADC_GetConversionResult();      
         
-        //conversion from ADC reading to voltage value
-        voltage_level = (float)(result * 3.3)/4095;             
+        /* conversion from ADC reading to voltage value */
+        voltageLevel = (float)(result * 3.3 / 4095.0);             
       
-        printf("%.2f", voltage_level);
-        printf("%s\r\n", "V");
+        printf("%.2f V\n\r", voltageLevel);
         __delay_ms(500);             
     }    
 }

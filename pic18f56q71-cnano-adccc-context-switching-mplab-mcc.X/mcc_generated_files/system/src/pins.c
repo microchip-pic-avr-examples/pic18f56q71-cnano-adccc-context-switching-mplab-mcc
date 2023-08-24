@@ -78,14 +78,6 @@ void PIN_MANAGER_Initialize(void)
     WPUF = 0x0;
 
     /**
-    RxyI2C registers
-    */
-    RB1I2C = 0x0;
-    RB2I2C = 0x0;
-    RC3I2C = 0x0;
-    RC4I2C = 0x0;
-
-    /**
     ODx registers
     */
     ODCONA = 0x0;
@@ -114,6 +106,14 @@ void PIN_MANAGER_Initialize(void)
     INLVLD = 0xFF;
     INLVLE = 0xF;
     INLVLF = 0xFF;
+
+   /**
+    RxyI2C | RxyFEAT registers   
+    */
+    RB1I2C = 0x0;
+    RB2I2C = 0x0;
+    RC3I2C = 0x0;
+    RC4I2C = 0x0;
     /**
     PPS registers
     */
@@ -138,9 +138,6 @@ void PIN_MANAGER_Initialize(void)
     IOCEP = 0x0;
     IOCEN = 0x0;
     IOCEF = 0x0;
-    IOCFP = 0x0;
-    IOCFN = 0x0;
-    IOCFF = 0x0;
 
 
 }

@@ -1,13 +1,13 @@
 /**
- * CONFIGURATION BITS Generated Driver Header File
+ * CLOCK Generated Driver Source File
  * 
- * @file config_bits.h
+ * @file clock.c
  * 
- * @defgroup config_bitsdriver CONFIGBITS Driver 
+ * @ingroup clockdriver 
  * 
- * @brief This is the generated header file for the CONFIGURATION BITS.
+ * @brief This file contains the API prototypes for the Clock driver.
  *
- * @version Driver Version 1.0.0
+ * @version Driver Version 2.0.3
 */
 
 /*
@@ -31,14 +31,28 @@
     THIS SOFTWARE.
 */
 
-#ifndef CONFIG_BITS_H
-#define	CONFIG_BITS_H
-/**
-   Section: Included Files
- */
-#include "../system/clock.h"
+#include <xc.h>
+#include "../clock.h"
 
-#endif	/* CONFIG_BITS_H */
+void CLOCK_Initialize(void)
+{
+    // Set the CLOCK CONTROL module to the options selected in the user interface.
+    //NDIV 1; NOSC HFINTOSC; 
+    OSCCON1 = 0x60;
+    //SOSCPWR Low power; CSWHOLD may proceed; 
+    OSCCON3 = 0x0;
+    //EXTOEN disabled; HFOEN disabled; MFOEN disabled; LFOEN disabled; SOSCEN disabled; ADOEN enabled; PLLEN disabled; 
+    OSCEN = 0x4;
+    //HFFRQ 64_MHz; 
+    OSCFRQ = 0x8;
+    //TUN undefined; 
+    OSCTUNE = 0x0;
+    //ACTEN disabled; ACTUD enabled; 
+    ACTCON = 0x0;
+    //FSCMFEV detected; FSCMFFI enabled; FSCMPEV detected; FSCMPFI enabled; FSCMSEV detected; FSCMSFI enabled; 
+    FSCMCON = 0x0;
+
+}
 /**
  End of File
 */

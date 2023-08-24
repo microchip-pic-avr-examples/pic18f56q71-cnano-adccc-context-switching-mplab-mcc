@@ -36,7 +36,6 @@
 
 #include <xc.h>
 #include "../adc.h"
-#include "../../system/interrupt.h"
 
 
 void ADC_Initialize(void)
@@ -50,8 +49,8 @@ void ADC_Initialize(void)
     //ADCCS FOSC/2; 
     ADCLK = 0x0;
 
-    //CGA0 disabled; CGA1 disabled; CGA2 disabled; CGA3 disabled; CGA4 disabled; CGA5 disabled; CGA6 disabled; CGA7 disabled; 
-    ADCGA = 0x0;
+    //CGA0 disabled; CGA1 enabled; CGA2 enabled; CGA3 disabled; CGA4 disabled; CGA5 disabled; CGA6 disabled; CGA7 disabled; 
+    ADCGA = 0x6;
 
     //CGB0 disabled; CGB1 disabled; CGB2 disabled; CGB3 disabled; CGB4 disabled; CGB5 disabled; CGB6 disabled; CGB7 disabled; 
     ADCGB = 0x0;
@@ -77,11 +76,11 @@ void ADC_Initialize(void)
     //ADLTHH 0; 
     ADLTHH = 0x0;
 
-    //ADUTHL 60; 
-    ADUTHL = 0x3C;
+    //ADUTHL 0; 
+    ADUTHL = 0x0;
 
-    //ADUTHH 24; 
-    ADUTHH = 0x18;
+    //ADUTHH 0; 
+    ADUTHH = 0x0;
 
     //ADSTPTL 0; 
     ADSTPTL = 0x0;
@@ -164,11 +163,11 @@ void ADC_Initialize(void)
     //ADLTHH 0; 
     ADLTHH = 0x0;
 
-    //ADUTHL 60; 
-    ADUTHL = 0x3C;
+    //ADUTHL 0; 
+    ADUTHL = 0x0;
 
-    //ADUTHH 24; 
-    ADUTHH = 0x18;
+    //ADUTHH 0; 
+    ADUTHH = 0x0;
 
     //ADSTPTL 0; 
     ADSTPTL = 0x0;
