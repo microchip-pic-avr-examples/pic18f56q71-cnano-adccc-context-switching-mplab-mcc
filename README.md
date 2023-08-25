@@ -2,7 +2,7 @@
 
 # Analog-to-Digital Converter with Computation (ADCC) and Context Switching — Context Switching Using PIC18F56Q71 Microcontroller with MCC Melody
 
-This code example demonstrates how to perform two Analog-to-Digital Converter with Computation (ADCC) and Context Switching conversions from two input channels that have different peripheral configurations by using the Context Switching feature. The ADCC with Context Switching supports up to four configuration contexts and offers the option of switching between these contexts at run-time. By using this feature, a single ADCC with Context Switching peripheral is used to capture data from multiple analog input channels, each one of them having its own configuration. The conversion results are processed and displayed on a terminal software by using serial communication via an UART peripheral.
+This code example demonstrates how to perform two Analog-to-Digital Converter with Computation (ADCC) and Context Switching conversions from two input channels that have different peripheral configurations by using the Context Switching feature. The ADCC with Context Switching supports up to four configuration contexts and offers the option of switching between these contexts at runtime. By using this feature, a single ADCC with Context Switching peripheral is used to capture data from multiple analog input channels, each one of them having its own configuration. The conversion results are processed and displayed on a terminal software by using serial communication via an UART peripheral.
 
 ## Related Documentation
 
@@ -121,12 +121,9 @@ This chapter demonstrates how to use the MPLAB® X IDE to program an PIC® devic
 
 <br>
 
-- [Analog-to-Digital Converter with Computation (ADCC) and Context Switching — Context Switching Using PIC18F56Q71 Microcontroller with MCC Melody](#analog-to-digital-converter-with-computation-adcc-and-context-switching--context-switching-using-pic18f56q71-microcontroller-with-mcc-melody)
-  - [Related Documentation](#related-documentation)
-  - [Software Used](#software-used)
-  - [Hardware Used](#hardware-used)
-  - [Operation](#operation)
-  - [Setup](#setup)
-  - [Demo](#demo)
-  - [Summary](#summary)
-  - [How to Program the Curiosity Nano Board](#how-to-program-the-curiosity-nano-board)
+- [Back to Top](#analog-to-digital-converter-with-computation-adcc-and-context-switching--context-switching-using-pic18f56q71-microcontroller-with-mcc-melody)
+- [Back to Setup](#setup)
+- [Back to Demo](#demo)
+- [Back to Summary](#summary)
+- [Back to How to Program the Curiosity Nano Board](#how-to-program-the-curiosity-nano-board)
+
