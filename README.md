@@ -14,7 +14,7 @@ More details and code examples on the PIC18F56Q71 can be found at the following 
 ## Software Used
 
 - [MPLAB® X IDE](http://www.microchip.com/mplab/mplab-x-ide) v6.15 or newer
-- [MPLAB® XC8](http://www.microchip.com/mplab/compilers) v2.41 or newer
+- [MPLAB® XC8](http://www.microchip.com/mplab/compilers) v2.45 or newer
 - [PIC18F-Q Series Device Pack](https://packs.download.microchip.com/) v1.21.411 or newer
 
 ## Hardware Used
@@ -126,4 +126,3 @@ This chapter demonstrates how to use the MPLAB® X IDE to program an PIC® devic
 - [Back to Demo](#demo)
 - [Back to Summary](#summary)
 - [Back to How to Program the Curiosity Nano Board](#how-to-program-the-curiosity-nano-board)
-

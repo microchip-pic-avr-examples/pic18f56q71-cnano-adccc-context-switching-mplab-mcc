@@ -83,7 +83,7 @@ int main(void)
         /* conversion from ADC reading to voltage value */
         voltageLevel = (float)(result * 3.3 / 4095.0);             
       
-        printf("%.2f V\n\r", voltageLevel);
+        printf("%.2fV\n\r", voltageLevel);
         __delay_ms(500);             
     }    
 }
